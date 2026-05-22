@@ -1,0 +1,11 @@
+group,display_name,source,selected_by,validation_f1,validation_precision,validation_recall,validation_fp,test_f1,test_precision,test_recall,test_fp,test_fn,threshold,tau_high,symbolic_profile,decision_mode,config_id
+naive_baseline,Always negative,baseline_metrics,validation_f1,0.0,0.0,0.0,0,0.0,0.0,0.0,0,500,fixed_all_negative,,,,
+naive_baseline,Exact title,baseline_metrics,validation_f1,0.0,0.0,0.0,0,0.0,0.0,0.0,0,500,0.01,,,,
+lexical_baseline,BoW cosine,baseline_metrics,validation_f1,0.4376558603491272,0.3179347826086957,0.702,753,0.316950852557673,0.2115127175368139,0.632,1178,184,0.29000000000000004,,,,
+lexical_baseline,TF-IDF cosine (word),baseline_metrics,validation_f1,0.5081521739130435,0.3847736625514403,0.748,598,0.3703296703296703,0.2553030303030303,0.674,983,163,0.21000000000000002,,,,
+lexical_baseline,TF-IDF cosine (char),baseline_metrics,validation_f1,0.5105421686746988,0.4094202898550724,0.678,489,0.4044943820224719,0.294010889292196,0.648,778,176,0.35000000000000003,,,,
+lexical_baseline,Field-wise heuristic,baseline_metrics,validation_f1,0.4243727598566308,0.3307262569832402,0.592,599,0.3658099222952779,0.2608695652173913,0.612,867,194,0.52,,,,
+learned_ablation,Learned scorer,decision_config_sweep,validation_f1,0.5718875502008032,0.4778523489932886,0.712,389,0.4102564102564102,0.2984531392174704,0.656,771,172,0.66,,none,neural_threshold,neural_only|thr=0.66
+symbolic_ablation,"Neuro-symbolic, moderate",decision_config_sweep,validation_f1,0.4594871794871795,0.471578947368421,0.448,251,0.3722172751558326,0.3354735152487961,0.418,414,291,0.5,,moderate,invalid_blocks,invalid_blocks|profile=moderate|thr=0.50
+extension,Two-threshold governance,decision_config_sweep,validation_f1,0.5658835546475995,0.5782881002087683,0.554,202,0.4574468085106383,0.410828025477707,0.516,370,242,0.66,0.8,conservative,strict_valid_or_high_confidence,strict_two_threshold|profile=conservative|thr=0.66|tau_high=0.80
+proposed,"Neuro-symbolic, conservative",decision_config_sweep,validation_f1,0.5862068965517241,0.5625,0.612,238,0.4516653127538586,0.3803009575923393,0.556,453,222,0.66,,conservative,invalid_blocks,invalid_blocks|profile=conservative|thr=0.66

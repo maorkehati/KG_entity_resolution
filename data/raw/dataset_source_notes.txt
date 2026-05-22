@@ -1,0 +1,17 @@
+WDC Products benchmark — source notes
+=====================================
+
+Benchmark page: https://webdatacommons.org/largescaleproductcorpus/wdc-products/
+GitHub repository: https://github.com/wbsg-uni-mannheim/wdcproducts
+Download captured: 2026-05-21 18:23:07 UTC
+
+This benchmark was chosen because product records support symbolic governance
+constraints (brand, category, identifiers, numeric attributes, title heuristics)
+for constraint-aware entity resolution experiments.
+
+The HTML snapshot of the benchmark page is saved as:
+  wdc_products_page.html
+
+Candidate download URLs were extracted from the page and from verified upstream
+references. Select the exact benchmark variant (corner-case %, pairwise vs
+multi-class) before downloading archives into data/raw/ or data/interim/.

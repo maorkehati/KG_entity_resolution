@@ -1,0 +1,23 @@
+{
+  "variant_id": "pairwise_50_medium_unseen100",
+  "run_name": "neural_logreg",
+  "models": [
+    "field_attention",
+    "structured_transformer"
+  ],
+  "threshold_objective": "f1",
+  "selected_thresholds": {
+    "existing_scorer": 0.66,
+    "field_attention": 0.5700000000000001,
+    "structured_transformer": 0.49
+  },
+  "group_dims": {
+    "title": 8,
+    "brand": 7,
+    "description": 7,
+    "price": 7,
+    "identifier": 9,
+    "quantity": 6
+  },
+  "notes": "Structured field attention vs transformer-inspired matcher."
+}

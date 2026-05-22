@@ -1,0 +1,21 @@
+{
+  "total": 14000,
+  "accepted": 1711,
+  "rejected": 12074,
+  "flagged": 215,
+  "accept_rate": 0.12221428571428572,
+  "reject_rate": 0.8624285714285714,
+  "flag_rate": 0.015357142857142857,
+  "symbolic_valid_count": 3591,
+  "symbolic_invalid_count": 5711,
+  "symbolic_uncertain_count": 4698,
+  "invalid_block_count": 904,
+  "invalid_block_positive_labels": 244,
+  "invalid_block_negative_labels": 660,
+  "variant_id": "pairwise_50_medium_unseen100",
+  "run_name": "neural_logreg",
+  "threshold": 0.66,
+  "decision_mode": "strict_valid_or_high_confidence",
+  "tau_high": 0.9,
+  "uncertain_action": "flag"
+}

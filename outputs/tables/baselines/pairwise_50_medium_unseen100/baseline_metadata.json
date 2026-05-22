@@ -1,0 +1,19 @@
+{
+  "variant_id": "pairwise_50_medium_unseen100",
+  "baselines": [
+    "always_negative",
+    "exact_title_match",
+    "bow_cosine",
+    "tfidf_cosine_word",
+    "tfidf_cosine_char",
+    "fieldwise_lexical_heuristic"
+  ],
+  "calibration_split": "valid",
+  "eval_splits": [
+    "train",
+    "valid",
+    "test"
+  ],
+  "threshold_objective": "f1",
+  "notes": "Naive and lexical baselines for WDC entity resolution."
+}

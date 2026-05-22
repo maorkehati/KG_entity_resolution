@@ -1,0 +1,47 @@
+{
+  "variant_id": "pairwise_50_medium_unseen100",
+  "run_name": "neural_logreg",
+  "symbolic_profile": "conservative",
+  "calibration_split": "valid",
+  "test_split": "test",
+  "selection_objective": "f1",
+  "thresholds": [
+    0.5,
+    0.6,
+    0.66,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "lambda_values": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "rho_values": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "risk_weights": {
+    "brand_conflict": 1.0,
+    "model_token_conflict": 1.0,
+    "quantity_conflict": 1.0,
+    "variant_modifier_conflict": 0.8,
+    "accessory_main_product_conflict": 1.0,
+    "bundle_or_kit_conflict": 0.4,
+    "category_keyword_conflict": 0.4,
+    "same_currency_price_conflict": 0.2,
+    "color_conflict": 0.2
+  },
+  "num_grid_configs": 90,
+  "notes": "Soft symbolic risk exploratory experiment; parameters selected on validation only."
+}

@@ -1,0 +1,73 @@
+{
+  "variant_id": "pairwise_50_medium_unseen100",
+  "task": "pairwise",
+  "corner_case_ratio": 50,
+  "development_size": "medium",
+  "unseen_test_ratio": 100,
+  "description": "Main experiment: WDC Products pairwise binary matching, 50% corner cases, medium development set, 100% unseen test entities.",
+  "source_files": {
+    "train": "C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\data\\interim\\wdc_products\\wdcproducts50cc50rnd000un_train_medium.json.gz",
+    "valid": "C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\data\\interim\\wdc_products\\wdcproducts50cc50rnd000un_valid_medium.json.gz",
+    "test": "C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\data\\interim\\wdc_products\\wdcproducts50cc50rnd100un_gs.json.gz"
+  },
+  "splits": {
+    "train": {
+      "rows": 6000,
+      "output_path": "data\\processed\\pairwise_50_medium_unseen100\\train.parquet",
+      "label_distribution": {
+        "0": 4500,
+        "1": 1500
+      }
+    },
+    "valid": {
+      "rows": 3500,
+      "output_path": "data\\processed\\pairwise_50_medium_unseen100\\valid.parquet",
+      "label_distribution": {
+        "0": 3000,
+        "1": 500
+      }
+    },
+    "test": {
+      "rows": 4500,
+      "output_path": "data\\processed\\pairwise_50_medium_unseen100\\test.parquet",
+      "label_distribution": {
+        "0": 4000,
+        "1": 500
+      }
+    }
+  },
+  "normalized_columns": [
+    "left_id",
+    "left_title",
+    "left_description",
+    "left_brand",
+    "left_price",
+    "left_price_currency",
+    "right_id",
+    "right_title",
+    "right_description",
+    "right_brand",
+    "right_price",
+    "right_price_currency",
+    "label",
+    "pair_id",
+    "raw__id_left",
+    "raw__brand_left",
+    "raw__title_left",
+    "raw__description_left",
+    "raw__price_left",
+    "raw__priceCurrency_left",
+    "raw__cluster_id_left",
+    "raw__id_right",
+    "raw__brand_right",
+    "raw__title_right",
+    "raw__description_right",
+    "raw__price_right",
+    "raw__priceCurrency_right",
+    "raw__cluster_id_right",
+    "raw__is_hard_negative",
+    "left_text",
+    "right_text",
+    "pair_text"
+  ]
+}

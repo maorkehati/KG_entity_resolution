@@ -1,0 +1,25 @@
+{
+  "variant_id": "pairwise_50_medium_unseen100",
+  "run_name": "neural_logreg",
+  "model_type": "logreg",
+  "train_split": "train",
+  "predict_splits": [
+    "train",
+    "valid",
+    "test"
+  ],
+  "class_weight": "balanced",
+  "random_state": 42,
+  "num_train_rows": 6000,
+  "train_label_distribution": {
+    "0": 4500,
+    "1": 1500
+  },
+  "output_prediction_files": {
+    "train": "outputs\\predictions\\pairwise_50_medium_unseen100\\neural_logreg\\raw_train_predictions.csv",
+    "valid": "outputs\\predictions\\pairwise_50_medium_unseen100\\neural_logreg\\raw_valid_predictions.csv",
+    "test": "outputs\\predictions\\pairwise_50_medium_unseen100\\neural_logreg\\raw_test_predictions.csv"
+  },
+  "model_path": "outputs\\models\\pairwise_50_medium_unseen100\\neural_logreg\\model.joblib",
+  "default_threshold_note": "No decision threshold applied in training stage. Use scripts/08_validate_neural_predictions.py."
+}

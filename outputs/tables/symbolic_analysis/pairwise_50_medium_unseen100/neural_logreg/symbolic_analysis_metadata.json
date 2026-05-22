@@ -1,0 +1,30 @@
+{
+  "variant_id": "pairwise_50_medium_unseen100",
+  "run_name": "neural_logreg",
+  "threshold": 0.66,
+  "symbolic_profile": "conservative",
+  "decision_mode": "invalid_blocks",
+  "splits": [
+    "valid",
+    "test"
+  ],
+  "hard_constraints": [
+    "brand_conflict",
+    "accessory_main_product_conflict",
+    "model_token_conflict",
+    "variant_modifier_conflict",
+    "quantity_conflict"
+  ],
+  "analyzed_constraints": [
+    "brand_conflict",
+    "accessory_main_product_conflict",
+    "model_token_conflict",
+    "variant_modifier_conflict",
+    "quantity_conflict",
+    "bundle_or_kit_conflict",
+    "category_keyword_conflict",
+    "same_currency_price_conflict",
+    "color_conflict"
+  ],
+  "notes": "Per-constraint impact and leave-one-rule-out ablations on raw neural predictions."
+}

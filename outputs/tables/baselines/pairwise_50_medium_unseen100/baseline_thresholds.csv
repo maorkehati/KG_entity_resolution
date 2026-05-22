@@ -1,0 +1,7 @@
+variant_id,baseline,calibration_split,threshold,threshold_objective,calibration_precision,calibration_recall,calibration_f1,calibration_fp,calibration_fn
+pairwise_50_medium_unseen100,always_negative,valid,fixed_all_negative,f1,0.0,0.0,0.0,0,500
+pairwise_50_medium_unseen100,exact_title_match,valid,0.01,f1,0.0,0.0,0.0,0,500
+pairwise_50_medium_unseen100,bow_cosine,valid,0.29000000000000004,f1,0.3179347826086957,0.702,0.4376558603491272,753,149
+pairwise_50_medium_unseen100,tfidf_cosine_word,valid,0.21000000000000002,f1,0.38477366255144035,0.748,0.5081521739130435,598,126
+pairwise_50_medium_unseen100,tfidf_cosine_char,valid,0.35000000000000003,f1,0.40942028985507245,0.678,0.5105421686746988,489,161
+pairwise_50_medium_unseen100,fieldwise_lexical_heuristic,valid,0.52,f1,0.3307262569832402,0.592,0.4243727598566308,599,204

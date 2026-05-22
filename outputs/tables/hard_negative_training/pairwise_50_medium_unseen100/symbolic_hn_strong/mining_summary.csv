@@ -1,0 +1,4 @@
+variant_id,experiment_name,iteration,num_hard_negatives,hard_negative_rate,mean_hard_negative_score,min_hard_negative_score,max_hard_negative_score,mean_sample_weight,max_sample_weight,constraint_counts_json
+pairwise_50_medium_unseen100,symbolic_hn_strong,1,162,0.027,0.7693332482856936,0.6600302654823056,0.9646451329169565,1.054,3.0,"{""model_token_conflict"": 150, ""quantity_conflict"": 15, ""variant_modifier_conflict"": 9, ""brand_conflict"": 3}"
+pairwise_50_medium_unseen100,symbolic_hn_strong,2,1,0.00016666666666666666,0.8136149467756327,0.8136149467756327,0.8136149467756327,1.055,9.0,"{""quantity_conflict"": 1}"
+pairwise_50_medium_unseen100,symbolic_hn_strong,3,2,0.0003333333333333333,0.7777748939556867,0.7029641603848477,0.8525856275265257,1.0561666666666667,10.0,"{""model_token_conflict"": 1, ""quantity_conflict"": 1}"

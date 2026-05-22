@@ -1,0 +1,14 @@
+{
+  "variant_id": "pairwise_50_medium_unseen100",
+  "experiment_name": "symbolic_hn_strong",
+  "base_run_name": "neural_logreg",
+  "iterations": 3,
+  "score_threshold": 0.66,
+  "hard_negative_weight": 3.0,
+  "max_weight": 10.0,
+  "constraint_mode": "strong_only",
+  "symbolic_profile": "conservative",
+  "threshold": 0.66,
+  "random_state": 42,
+  "notes": "Iterative symbolic hard-negative reweighting experiment."
+}

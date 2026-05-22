@@ -1,0 +1,12 @@
+pandas
+numpy>=1.26,<2
+pyarrow>=15.0.0
+scikit-learn
+scipy
+joblib
+requests
+tqdm
+matplotlib
+rich
+rapidfuzz
+torch>=2.4.1

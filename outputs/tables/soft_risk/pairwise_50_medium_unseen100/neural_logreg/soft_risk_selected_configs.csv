@@ -1,0 +1,5 @@
+method_family,selection_split,test_split,selected_by,config_id,mode,threshold,lambda_risk,rho,validation_precision,validation_recall,validation_f1,validation_fp,validation_fn,test_precision,test_recall,test_f1,test_fp,test_fn,test_accuracy,test_balanced_accuracy
+neural_only,valid,test,f1,mode=neural_only|thr=0.66,neural_only,0.66,0.0,,0.4778523489932886,0.712,0.5718875502008032,389,144,0.2984531392174704,0.656,0.41025641025641024,771,172,0.7904444444444444,0.731625
+hard_invalid_blocks,valid,test,f1,mode=hard_invalid_blocks|thr=0.66,hard_invalid_blocks,0.66,0.0,,0.5625,0.612,0.5862068965517241,238,194,0.3803009575923393,0.556,0.4516653127538586,453,222,0.85,0.7213750000000001
+soft_score_penalty,valid,test,f1,mode=soft_score_penalty|thr=0.66|lam=1,soft_score_penalty,0.66,1.0,,0.5327868852459017,0.65,0.5855855855855856,285,175,0.34195725534308213,0.608,0.4377249820014399,585,196,0.8264444444444444,0.7308749999999999
+soft_risk_gate,valid,test,f1,mode=soft_risk_gate|thr=0.66|rho=0.1,soft_risk_gate,0.66,0.0,0.1,0.5625,0.612,0.5862068965517241,238,194,0.3803009575923393,0.556,0.4516653127538586,453,222,0.85,0.7213750000000001

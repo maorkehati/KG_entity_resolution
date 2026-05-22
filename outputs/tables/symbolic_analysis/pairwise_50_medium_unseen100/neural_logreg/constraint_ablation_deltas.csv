@@ -1,0 +1,13 @@
+split,ablation,removed_constraint,delta_precision_vs_full,delta_recall_vs_full,delta_f1_vs_full,delta_fp_vs_full,delta_fn_vs_full
+valid,neural_only,,-0.0846476510067114,0.09999999999999998,-0.014319346350920914,151,-50
+valid,without_brand_conflict,brand_conflict,-0.001128158844765359,0.010000000000000009,0.003925930772754049,5,-5
+valid,without_accessory_main_product_conflict,accessory_main_product_conflict,0.001136363636363602,0.008000000000000007,0.0042692939244664,2,-4
+valid,without_model_token_conflict,model_token_conflict,-0.07505539143279172,0.04800000000000004,-0.025459233000322268,109,-24
+valid,without_variant_modifier_conflict,variant_modifier_conflict,-0.004401408450704247,0.02200000000000002,0.007426062249774046,13,-11
+valid,without_quantity_conflict,quantity_conflict,-0.004738267148014397,0.006000000000000005,0.00013086435909182015,7,-3
+test,neural_only,,-0.08184781837486887,0.09999999999999998,-0.041408902497448385,318,-50
+test,without_brand_conflict,brand_conflict,-0.00243321130354035,0.0040000000000000036,-0.0004163200060745553,8,-2
+test,without_accessory_main_product_conflict,accessory_main_product_conflict,-0.0008971635543988943,0.0040000000000000036,0.0006771751298247364,5,-2
+test,without_model_token_conflict,model_token_conflict,-0.06546745607871668,0.06799999999999995,-0.033154246355468264,226,-34
+test,without_variant_modifier_conflict,variant_modifier_conflict,-0.005630772895769354,0.0119999999999999,-0.00015497889058357917,21,-6
+test,without_quantity_conflict,quantity_conflict,-0.015959872321021473,0.007999999999999896,-0.008965155767987343,39,-4
