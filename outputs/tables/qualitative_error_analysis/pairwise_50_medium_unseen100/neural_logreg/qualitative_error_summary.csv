@@ -1,0 +1,8 @@
+split,category,count,rate_over_total,rate_over_neural_accepts,rate_over_governed_accepts,rate_over_true_positives,rate_over_false_positives,mean_neural_score,median_neural_score
+test,blocked_false_positives,318,0.070667,0.289354,0.0,0.0,0.0795,0.8172,0.8087
+test,blocked_true_positives,50,0.011111,0.045496,0.0,0.1,0.0,0.828,0.8465
+test,remaining_false_positives,453,0.100667,0.412193,0.619699,0.0,0.11325,0.8235,0.829
+test,false_negatives_total,222,0.049333,0.045496,0.0,0.444,0.0,0.5358,0.5499
+test,false_negatives_score,121,0.026889,0.0,0.0,0.242,0.0,0.4573,0.4936
+test,false_negatives_symbolic,50,0.011111,0.045496,0.0,0.1,0.0,0.828,0.8465
+test,false_negatives_other,51,0.011333,0.0,0.0,0.102,0.0,0.4356,0.4771

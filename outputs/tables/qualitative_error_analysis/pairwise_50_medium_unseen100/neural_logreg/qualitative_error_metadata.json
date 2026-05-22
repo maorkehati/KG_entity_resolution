@@ -1,0 +1,20 @@
+{
+  "variant": "pairwise_50_medium_unseen100",
+  "run_name": "neural_logreg",
+  "split": "test",
+  "threshold": 0.66,
+  "decision_mode": "invalid_blocks",
+  "symbolic_profile": "conservative",
+  "data_source": "governed_predictions",
+  "max_examples": 5,
+  "counts": {
+    "blocked_false_positives": 5,
+    "blocked_true_positives": 5,
+    "remaining_false_positives": 5,
+    "false_negatives_total": 5,
+    "false_negatives_score": 5,
+    "false_negatives_symbolic": 0,
+    "false_negatives_other": 0
+  },
+  "output_dir": "outputs/tables/qualitative_error_analysis/pairwise_50_medium_unseen100/neural_logreg"
+}

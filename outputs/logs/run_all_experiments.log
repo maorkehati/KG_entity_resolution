@@ -1,0 +1,45 @@
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\02_smoke_test.py
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\01_inspect_data.py
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\03_prepare_variant.py --variant pairwise_50_medium_unseen100
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\04_dataset_smoke_test.py --variant pairwise_50_medium_unseen100
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\05_explore_data.py --variant pairwise_50_medium_unseen100 --show-raw --max-examples 5
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\06_train_neural_scorer.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --train-split train --predict-splits train valid test
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\08_validate_neural_predictions.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --calibration-split valid --objective f1
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\08_validate_neural_predictions.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --calibration-split valid --objective recall_at_min_precision --min-precision 0.90
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\09_apply_symbolic_governance.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --threshold 0.66 --decision-mode invalid_blocks
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\09_apply_symbolic_governance.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --threshold 0.66 --decision-mode strict_valid_or_high_confidence --tau-high 0.90 --uncertain-action accept
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\10_sweep_decision_configs.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\11_plot_sweep_results.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\12_run_naive_baselines.py --variant pairwise_50_medium_unseen100
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\13_plot_main_method_comparison.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg
+
+================================================================================
+>>> C:\Users\mayoa\anaconda3\python.exe C:\Users\mayoa\Desktop\truelogic_assignment\scripts\14_analyze_symbolic_rule_impact.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --threshold 0.66 --symbolic-profile conservative --splits valid test

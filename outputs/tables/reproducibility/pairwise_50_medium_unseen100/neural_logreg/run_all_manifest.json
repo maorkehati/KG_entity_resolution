@@ -1,0 +1,73 @@
+{
+  "variant": "pairwise_50_medium_unseen100",
+  "run_name": "neural_logreg",
+  "hard_negative_experiment": "symbolic_hn_strong",
+  "timestamp": "2026-05-22T14:27:51.499814+00:00",
+  "commands_run": [
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\02_smoke_test.py",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\01_inspect_data.py",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\03_prepare_variant.py --variant pairwise_50_medium_unseen100",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\04_dataset_smoke_test.py --variant pairwise_50_medium_unseen100",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\05_explore_data.py --variant pairwise_50_medium_unseen100 --show-raw --max-examples 5",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\06_train_neural_scorer.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --train-split train --predict-splits train valid test",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\08_validate_neural_predictions.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --calibration-split valid --objective f1",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\08_validate_neural_predictions.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --calibration-split valid --objective recall_at_min_precision --min-precision 0.90",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\09_apply_symbolic_governance.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --threshold 0.66 --decision-mode invalid_blocks",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\09_apply_symbolic_governance.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --threshold 0.66 --decision-mode strict_valid_or_high_confidence --tau-high 0.90 --uncertain-action accept",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\10_sweep_decision_configs.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\11_plot_sweep_results.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\12_run_naive_baselines.py --variant pairwise_50_medium_unseen100",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\13_plot_main_method_comparison.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg",
+    "C:\\Users\\mayoa\\anaconda3\\python.exe C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\scripts\\14_analyze_symbolic_rule_impact.py --variant pairwise_50_medium_unseen100 --run-name neural_logreg --threshold 0.66 --symbolic-profile conservative --splits valid test"
+  ],
+  "outputs_expected": [
+    "data/processed/pairwise_50_medium_unseen100/train.parquet",
+    "data/processed/pairwise_50_medium_unseen100/valid.parquet",
+    "data/processed/pairwise_50_medium_unseen100/test.parquet",
+    "outputs/predictions/pairwise_50_medium_unseen100/neural_logreg/raw_train_predictions.csv",
+    "outputs/predictions/pairwise_50_medium_unseen100/neural_logreg/raw_valid_predictions.csv",
+    "outputs/predictions/pairwise_50_medium_unseen100/neural_logreg/raw_test_predictions.csv",
+    "outputs/tables/sweeps/pairwise_50_medium_unseen100/neural_logreg/decision_config_sweep.csv",
+    "outputs/tables/baselines/pairwise_50_medium_unseen100/baseline_metrics.csv",
+    "outputs/tables/symbolic_analysis/pairwise_50_medium_unseen100/neural_logreg/constraint_impact.csv",
+    "outputs/figures/final_comparison/pairwise_50_medium_unseen100/neural_logreg/figure1_baselines_vs_proposed_test_f1.png",
+    "outputs/figures/final_comparison/pairwise_50_medium_unseen100/neural_logreg/figure2_proposed_variants_test_f1.png",
+    "outputs/figures/final_comparison/pairwise_50_medium_unseen100/neural_logreg/figure3_intro_motivation_test_f1.png",
+    "outputs/tables/report_ablations/pairwise_50_medium_unseen100/neural_logreg/soft_risk_ablation_table.csv",
+    "outputs/tables/report_ablations/pairwise_50_medium_unseen100/neural_logreg/hard_negative_ablation_table.csv",
+    "outputs/tables/report_ablations/pairwise_50_medium_unseen100/neural_logreg/architecture_ablation_table.csv"
+  ],
+  "outputs_found": [
+    "data/processed/pairwise_50_medium_unseen100/train.parquet",
+    "data/processed/pairwise_50_medium_unseen100/valid.parquet",
+    "data/processed/pairwise_50_medium_unseen100/test.parquet",
+    "outputs/predictions/pairwise_50_medium_unseen100/neural_logreg/raw_train_predictions.csv",
+    "outputs/predictions/pairwise_50_medium_unseen100/neural_logreg/raw_valid_predictions.csv",
+    "outputs/predictions/pairwise_50_medium_unseen100/neural_logreg/raw_test_predictions.csv",
+    "outputs/tables/sweeps/pairwise_50_medium_unseen100/neural_logreg/decision_config_sweep.csv",
+    "outputs/tables/baselines/pairwise_50_medium_unseen100/baseline_metrics.csv",
+    "outputs/tables/symbolic_analysis/pairwise_50_medium_unseen100/neural_logreg/constraint_impact.csv",
+    "outputs/figures/final_comparison/pairwise_50_medium_unseen100/neural_logreg/figure1_baselines_vs_proposed_test_f1.png",
+    "outputs/figures/final_comparison/pairwise_50_medium_unseen100/neural_logreg/figure2_proposed_variants_test_f1.png",
+    "outputs/figures/final_comparison/pairwise_50_medium_unseen100/neural_logreg/figure3_intro_motivation_test_f1.png",
+    "outputs/tables/report_ablations/pairwise_50_medium_unseen100/neural_logreg/soft_risk_ablation_table.csv",
+    "outputs/tables/report_ablations/pairwise_50_medium_unseen100/neural_logreg/hard_negative_ablation_table.csv",
+    "outputs/tables/report_ablations/pairwise_50_medium_unseen100/neural_logreg/architecture_ablation_table.csv"
+  ],
+  "outputs_missing": [],
+  "warnings": [
+    "Skipped download (--skip-download)."
+  ],
+  "log_file": "outputs/logs/run_all_experiments.log",
+  "options": {
+    "skip_download": true,
+    "skip_optional": true,
+    "soft_risk": false,
+    "hard_negative_training": false,
+    "structured_models": false,
+    "final_figures": false,
+    "report_ablations": false,
+    "force": false,
+    "dry_run": true
+  }
+}

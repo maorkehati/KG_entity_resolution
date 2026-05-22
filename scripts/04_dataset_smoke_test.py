@@ -1,5 +1,6 @@
 """Smoke test for processed WDC pairwise parquet splits."""
 
+import argparse
 import sys
 from pathlib import Path
 
@@ -11,6 +12,12 @@ from src.config import DEFAULT_WDC_VARIANT_ID
 from src.data_loading import load_processed_variant
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Smoke test processed WDC variant splits.")
+    parser.add_argument("--variant", default=DEFAULT_WDC_VARIANT_ID)
+    return parser.parse_args()
+
+
 def _assert_label_mix(df, split: str) -> None:
     positives = int((df["label"] == 1).sum())
     negatives = int((df["label"] == 0).sum())
@@ -19,8 +26,9 @@ def _assert_label_mix(df, split: str) -> None:
 
 
 def main() -> int:
+    variant_id = parse_args().variant
     try:
-        dataset = load_processed_variant(DEFAULT_WDC_VARIANT_ID)
+        dataset = load_processed_variant(variant_id)
     except FileNotFoundError as exc:
         print(f"Error: {exc}", file=sys.stderr)
         print("Run: python scripts/03_prepare_variant.py", file=sys.stderr)

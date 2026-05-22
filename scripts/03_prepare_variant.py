@@ -1,5 +1,6 @@
-"""Materialize the default WDC pairwise variant to processed parquet files."""
+"""Materialize a WDC pairwise variant to processed parquet files."""
 
+import argparse
 import sys
 from pathlib import Path
 
@@ -12,8 +13,14 @@ from src.data_loading import load_wdc_pairwise_variant, save_processed_variant
 from src.download_wdc import extract_wdc_archives
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Prepare processed WDC variant parquet files.")
+    parser.add_argument("--variant", default=DEFAULT_WDC_VARIANT_ID)
+    return parser.parse_args()
+
+
 def main() -> int:
-    variant_id = DEFAULT_WDC_VARIANT_ID
+    variant_id = parse_args().variant
     print(f"Preparing WDC variant: {variant_id}")
 
     try:

@@ -1,0 +1,9 @@
+split,analysis_category,auto_category,count,mean_neural_score
+test,blocked_false_positives,different model identifiers,4,0.9926
+test,blocked_false_positives,variant mismatch,1,0.9922
+test,blocked_true_positives,different model identifiers,3,0.9606
+test,blocked_true_positives,variant mismatch,2,0.9756
+test,false_negatives,low lexical overlap / paraphrase,3,0.6538
+test,false_negatives,missing brand evidence,2,0.654
+test,remaining_false_positives,missing symbolic evidence,3,0.9877
+test,remaining_false_positives,high lexical overlap without symbolic contradiction,2,0.9903

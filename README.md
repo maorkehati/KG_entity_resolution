@@ -37,6 +37,57 @@ python scripts/07_lexical_baseline.py
 
 The download step saves the benchmark HTML and notes under `data/raw/`, prints candidate download links, and extracts any `.zip` archives found in `data/raw/` into `data/interim/wdc_products/`.
 
+## Reproducing all results
+
+After downloading/extracting the WDC Products files into `data/raw` or `data/interim/wdc_products`, run:
+
+```bash
+python scripts/99_run_all_experiments.py \
+  --variant pairwise_50_medium_unseen100 \
+  --run-name neural_logreg \
+  --hard-negative-experiment symbolic_hn_strong \
+  --soft-risk \
+  --hard-negative-training \
+  --structured-models \
+  --final-figures \
+  --report-ablations
+```
+
+Or:
+
+```bash
+bash run_all_experiments.sh
+```
+
+On Windows:
+
+```bat
+run_all_experiments.bat
+```
+
+This executes dataset preparation, neural scoring, symbolic governance, baselines, sweeps, optional ablations, and report figures.
+
+For a faster run that skips heavier optional experiments:
+
+```bash
+python scripts/99_run_all_experiments.py \
+  --variant pairwise_50_medium_unseen100 \
+  --run-name neural_logreg \
+  --skip-optional
+```
+
+Logs are saved to:
+
+```text
+outputs/logs/run_all_experiments.log
+```
+
+A reproducibility manifest is saved to:
+
+```text
+outputs/tables/reproducibility/{variant_id}/{run_name}/run_all_manifest.json
+```
+
 ## Selected Benchmark Variant
 
 Main variant:
@@ -288,6 +339,32 @@ Outputs are saved under:
 outputs/tables/report_ablations/{variant_id}/{run_name}/
 outputs/figures/report_ablations/{variant_id}/{run_name}/
 ```
+
+## Qualitative error analysis
+
+After training the neural scorer and applying symbolic governance, run:
+
+```bash
+python scripts/20_qualitative_error_analysis.py \
+  --variant pairwise_50_medium_unseen100 \
+  --run-name neural_logreg \
+  --threshold 0.66
+```
+
+The script samples representative test examples from:
+
+* neural false positives blocked by symbolic governance,
+* true positives incorrectly blocked by symbolic governance,
+* remaining false positives after governance,
+* false negatives caused by low neural score or symbolic invalidation.
+
+Outputs are saved under:
+
+```text
+outputs/tables/qualitative_error_analysis/{variant_id}/{run_name}/
+```
+
+The generated markdown preview (`qualitative_error_examples.md`) can be used to write the qualitative error-analysis section.
 
 ## Main comparison plot
 
