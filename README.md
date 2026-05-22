@@ -240,6 +240,55 @@ outputs/tables/baselines/{variant_id}/baseline_test_summary.csv
 outputs/predictions/{variant_id}/baselines/
 ```
 
+## Final comparison figures
+
+After running the baselines, decision sweep, and any optional extension experiments, generate final report figures:
+
+```bash
+python scripts/18_plot_final_comparison_figures.py \
+  --variant pairwise_50_medium_unseen100 \
+  --run-name neural_logreg
+```
+
+This creates three figures:
+
+1. Baselines vs the neuro-symbolic method.
+2. Variants of the neuro-symbolic method.
+3. Introduction motivation figure showing why neural-only and symbolic-only approaches are incomplete.
+
+All methods with tunable configurations are selected using validation F1 and reported using test F1.
+
+Outputs:
+
+```text
+outputs/figures/final_comparison/{variant_id}/{run_name}/
+outputs/tables/final_comparison/{variant_id}/{run_name}/
+```
+
+## Report ablation figures
+
+After running the optional ablation experiments, aggregate the report-ready tables and figures:
+
+```bash
+python scripts/19_prepare_ablation_report_results.py \
+  --variant pairwise_50_medium_unseen100 \
+  --run-name neural_logreg \
+  --hard-negative-experiment symbolic_hn_strong
+```
+
+This produces one table and one figure for each report ablation subsection:
+
+* hard vetoes vs. soft symbolic risk,
+* symbolically guided hard-negative training,
+* field-aware neural architectures.
+
+Outputs are saved under:
+
+```text
+outputs/tables/report_ablations/{variant_id}/{run_name}/
+outputs/figures/report_ablations/{variant_id}/{run_name}/
+```
+
 ## Main comparison plot
 
 After running naive baselines and the decision sweep:

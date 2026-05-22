@@ -1,0 +1,7 @@
+Model,Precision,Recall,F1,FP
+Flat learned scorer,0.298,0.656,0.41,771
+Field attention,0.395,0.606,0.478,465
+Structured transformer,0.367,0.654,0.471,563
+Field attention + governance,0.401,0.574,0.472,428
+Structured transformer + governance,0.377,0.618,0.468,511
+Flat learned scorer + governance,0.38,0.556,0.452,453

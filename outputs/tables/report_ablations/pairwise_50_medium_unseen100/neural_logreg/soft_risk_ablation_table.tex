@@ -1,0 +1,10 @@
+\begin{tabular}{llrrrr}
+\toprule
+Method & Configuration & Precision & Recall & F1 & FP \\
+\midrule
+Neural-only & τ=0.66 & 0.298000 & 0.656000 & 0.410000 & 771 \\
+Hard invalid-blocks & τ=0.66 & 0.380000 & 0.556000 & 0.452000 & 453 \\
+Soft score penalty & τ=0.66, λ=1 & 0.342000 & 0.608000 & 0.438000 & 585 \\
+Soft risk gate & τ=0.66, ρ=0.1 & 0.380000 & 0.556000 & 0.452000 & 453 \\
+\bottomrule
+\end{tabular}

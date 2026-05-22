@@ -1,0 +1,11 @@
+{
+  "variant_id": "pairwise_50_medium_unseen100",
+  "run_name": "neural_logreg",
+  "selection_rule": "validation_f1",
+  "plotted_metric": "test_f1",
+  "optional_included": {
+    "soft_risk": true,
+    "structured_models": true,
+    "hard_negative": true
+  }
+}

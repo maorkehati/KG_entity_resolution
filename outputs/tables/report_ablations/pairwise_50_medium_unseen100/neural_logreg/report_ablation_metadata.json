@@ -1,0 +1,22 @@
+{
+  "variant_id": "pairwise_50_medium_unseen100",
+  "run_name": "neural_logreg",
+  "hard_negative_experiment": "symbolic_hn_strong",
+  "selection_rule": "validation_f1",
+  "reported_split": "test",
+  "subsections": {
+    "soft_risk": {
+      "table": "C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\outputs\\tables\\report_ablations\\pairwise_50_medium_unseen100\\neural_logreg\\soft_risk_ablation_table.csv",
+      "figure": "C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\outputs\\figures\\report_ablations\\pairwise_50_medium_unseen100\\neural_logreg\\soft_risk_ablation_test_f1.png"
+    },
+    "hard_negative": {
+      "table": "C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\outputs\\tables\\report_ablations\\pairwise_50_medium_unseen100\\neural_logreg\\hard_negative_ablation_table.csv",
+      "figure": "C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\outputs\\figures\\report_ablations\\pairwise_50_medium_unseen100\\neural_logreg\\hard_negative_iterations_test_f1_fp.png"
+    },
+    "architecture": {
+      "table": "C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\outputs\\tables\\report_ablations\\pairwise_50_medium_unseen100\\neural_logreg\\architecture_ablation_table.csv",
+      "figure": "C:\\Users\\mayoa\\Desktop\\truelogic_assignment\\outputs\\figures\\report_ablations\\pairwise_50_medium_unseen100\\neural_logreg\\architecture_ablation_test_f1.png"
+    }
+  },
+  "warnings": []
+}

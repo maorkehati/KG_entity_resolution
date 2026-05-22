@@ -1,0 +1,5 @@
+Iteration,Neural Precision,Neural Recall,Neural F1,Neural FP,Governed Precision,Governed Recall,Governed F1,Governed FP,Mined hard negatives
+0,0.298,0.656,0.41,771,0.38,0.556,0.452,453,0
+1,0.316,0.036,0.065,39,0.474,0.036,0.067,20,162
+2,0.309,0.06,0.101,67,0.452,0.056,0.1,34,1
+3,0.331,0.08,0.129,81,0.456,0.072,0.124,43,2

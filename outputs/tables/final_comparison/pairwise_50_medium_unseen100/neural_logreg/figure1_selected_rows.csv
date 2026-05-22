@@ -1,0 +1,9 @@
+figure,display_name,group,source,selection_rule,validation_f1,validation_precision,validation_recall,validation_fp,test_f1,test_precision,test_recall,test_fp,test_fn,threshold,tau_high,iteration,model_name,method,decision_mode,symbolic_profile,config_id,notes
+figure1,Always negative,baseline,baseline_metrics,validation_f1,0.0,0.0,0.0,0,0.0,0.0,0.0,0,500,,,,,always_negative,,,,
+figure1,Exact title,baseline,baseline_metrics,validation_f1,0.0,0.0,0.0,0,0.0,0.0,0.0,0,500,0.01,,,,exact_title_match,,,,
+figure1,BoW cosine,baseline,baseline_metrics,validation_f1,0.4376558603491272,0.3179347826086957,0.702,753,0.316950852557673,0.2115127175368139,0.632,1178,184,0.29,,,,bow_cosine,,,,
+figure1,TF-IDF word,baseline,baseline_metrics,validation_f1,0.5081521739130435,0.3847736625514403,0.748,598,0.3703296703296703,0.2553030303030303,0.674,983,163,0.21,,,,tfidf_cosine_word,,,,
+figure1,TF-IDF char,baseline,baseline_metrics,validation_f1,0.5105421686746988,0.4094202898550724,0.678,489,0.4044943820224719,0.294010889292196,0.648,778,176,0.35,,,,tfidf_cosine_char,,,,
+figure1,Field-wise heuristic,baseline,baseline_metrics,validation_f1,0.4243727598566308,0.3307262569832402,0.592,599,0.3658099222952779,0.2608695652173913,0.612,867,194,0.52,,,,fieldwise_lexical_heuristic,,,,
+figure1,neural-only,neural-only,decision_config_sweep,validation_f1,0.5718875502008032,0.4778523489932886,0.712,389,0.4102564102564102,0.2984531392174704,0.656,771,172,0.66,,,,neural_only,neural_threshold,none,neural_only|thr=0.66,
+figure1,neuro-symbolic (conservative),neuro-symbolic,decision_config_sweep,validation_f1,0.5862068965517241,0.5625,0.612,238,0.4516653127538586,0.3803009575923393,0.556,453,222,0.66,,,,neuro_symbolic_invalid_blocks,invalid_blocks,conservative,invalid_blocks|profile=conservative|thr=0.66,

@@ -1,0 +1,5 @@
+Method,Configuration,Precision,Recall,F1,FP
+Neural-only,τ=0.66,0.298,0.656,0.41,771
+Hard invalid-blocks,τ=0.66,0.38,0.556,0.452,453
+Soft score penalty,"τ=0.66, λ=1",0.342,0.608,0.438,585
+Soft risk gate,"τ=0.66, ρ=0.1",0.38,0.556,0.452,453
